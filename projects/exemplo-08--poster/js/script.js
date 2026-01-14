@@ -1,3 +1,7 @@
+// Variável global para armazenar a imagem carregada
+let uploadedImage = null;
+
+// Cache de elementos DOM para melhor performance
 const elements = {
 	imageUpload: document.getElementById('imageUpload'),
 	imageUploadBtn: document.getElementById('imageUploadBtn'),
@@ -71,7 +75,12 @@ function generatePoster() {
 
 	// Validação básica
 	if (!title || !uploadedImage) {
-		alert('⚠️ Por favor, preencha pelo menos o título e adicione uma imagem!');
+		Toastify({
+			text: '⚠️ Por favor, preencha pelo menos o título e adicione uma imagem!',
+			duration: 3000,
+			backgroundColor: 'linear-gradient(to right, #ff5f6d, #ffc371)',
+			stopOnFocus: true,
+		}).showToast();
 		return;
 	}
 
@@ -231,16 +240,32 @@ function downloadPoster() {
 			document.body.appendChild(link);
 			link.click();
 			document.body.removeChild(link);
+
+			// Toast de sucesso
+			Toastify({
+				text: '✅ Pôster baixado com sucesso!',
+				duration: 3000,
+				backgroundColor: 'linear-gradient(to right, #00b09b, #96c93d)',
+				stopOnFocus: true,
+			}).showToast();
 		} catch (error) {
 			console.error('Erro ao baixar:', error);
-			alert(
-				'Erro ao gerar o download. Verifique se a imagem foi carregada corretamente.'
-			);
+			Toastify({
+				text: '❌ Erro ao gerar o download. Verifique se a imagem foi carregada corretamente.',
+				duration: 4000,
+				backgroundColor: 'linear-gradient(to right, #ff5f6d, #ffc371)',
+				stopOnFocus: true,
+			}).showToast();
 		}
 	};
 
 	img.onerror = function () {
-		alert('Erro ao carregar a imagem. Verifique o arquivo.');
+		Toastify({
+			text: '❌ Erro ao carregar a imagem. Verifique o arquivo.',
+			duration: 4000,
+			backgroundColor: 'linear-gradient(to right, #ff5f6d, #ffc371)',
+			stopOnFocus: true,
+		}).showToast();
 	};
 
 	img.src = uploadedImage;
