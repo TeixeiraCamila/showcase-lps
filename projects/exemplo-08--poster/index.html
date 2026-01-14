@@ -9,68 +9,109 @@
 	</head>
 
 	<body>
-		<div class="container">
-			<div class="header">
-				<h1>🎬 Gerador de Pôsteres</h1>
-				<p>Crie pôsteres profissionais para seu Notion</p>
+		<div class="poster-generator">
+			<div class="poster-generator__header">
+				<h1 class="poster-generator__title">🎬 Gerador de Pôsteres</h1>
+				<p class="poster-generator__subtitle">
+					Crie pôsteres profissionais para seu Notion
+				</p>
 			</div>
 
-			<div class="main-grid">
-				<div class="card">
-					<h2>Informações</h2>
+			<div class="poster-generator__main">
+				<div class="card poster-generator__form-card">
+					<h2 class="card__title">Informações</h2>
 
-					<div class="form-group">
-						<label for="title">Título *</label>
-						<input type="text" id="title" placeholder="Ex: SEMANTIC ERROR" />
-					</div>
-
-					<div class="grid-2">
-						<div class="form-group">
-							<label for="year">Ano</label>
-							<input type="text" id="year" placeholder="2022" />
-						</div>
-						<div class="form-group">
-							<label for="genre">Gênero</label>
-							<input type="text" id="genre" placeholder="COMEDY ROMANCE" />
-						</div>
-					</div>
-
-					<div class="form-group">
-						<label for="nativeTitle">Título Original</label>
-						<input type="text" id="nativeTitle" placeholder="시맨틱 에러" />
-					</div>
-
-					<div class="grid-2">
-						<div class="form-group">
-							<label for="directedBy">Dirigido por</label>
-							<input type="text" id="directedBy" placeholder="KIM SOO JUNG" />
-						</div>
-
-						<div class="form-group">
-							<label for="writtenBy">Escrito por</label>
-							<input type="text" id="writtenBy" placeholder="JASAN" />
-						</div>
-					</div>
-
-					<div class="form-group">
-						<label>Elenco (use até 3 campos)</label>
+					<div class="form__group">
+						<label class="form__label" for="title">Título *</label>
 						<input
+							class="form__input"
+							type="text"
+							id="title"
+							placeholder="Ex: SEMANTIC ERROR"
+						/>
+					</div>
+
+					<div class="form__grid-2">
+						<div class="form__group">
+							<label class="form__label" for="year">Ano</label>
+							<input
+								class="form__input"
+								type="text"
+								id="year"
+								placeholder="2022"
+							/>
+						</div>
+						<div class="form__group">
+							<label class="form__label" for="genre">Gênero</label>
+							<input
+								class="form__input"
+								type="text"
+								id="genre"
+								placeholder="COMEDY ROMANCE"
+							/>
+						</div>
+					</div>
+
+					<div class="form__group">
+						<label class="form__label" for="nativeTitle">Título Original</label>
+						<input
+							class="form__input"
+							type="text"
+							id="nativeTitle"
+							placeholder="시맨틱 에러"
+						/>
+					</div>
+
+					<div class="form__grid-2">
+						<div class="form__group">
+							<label class="form__label" for="directedBy">Dirigido por</label>
+							<input
+								class="form__input"
+								type="text"
+								id="directedBy"
+								placeholder="KIM SOO JUNG"
+							/>
+						</div>
+
+						<div class="form__group">
+							<label class="form__label" for="writtenBy">Escrito por</label>
+							<input
+								class="form__input"
+								type="text"
+								id="writtenBy"
+								placeholder="JASAN"
+							/>
+						</div>
+					</div>
+
+					<div class="form__group">
+						<label class="form__label">Elenco (use até 3 campos)</label>
+						<input
+							class="form__input"
 							type="text"
 							id="starring1"
 							placeholder="PARK SEO HAM"
 							style="margin-bottom: 10px"
 						/>
 						<input
+							class="form__input"
 							type="text"
 							id="starring2"
 							placeholder="PARK JAE CHAN"
 							style="margin-bottom: 10px"
 						/>
-						<input type="text" id="starring3" placeholder="Ator/Atriz 3" />
+						<input
+							class="form__input"
+							type="text"
+							id="starring3"
+							placeholder="Ator/Atriz 3"
+						/>
 					</div>
 
-					<div class="form-group">
-						<label for="imageUpload">Imagem do Pôster *</label>
+					<div class="form__group">
+						<label class="form__label" for="imageUpload"
+							>Imagem do Pôster *</label
+						>
 						<input
 							type="file"
 							id="imageUpload"
@@ -78,7 +119,7 @@
 							style="display: none"
 						/>
 						<button
-							class="btn btn-secondary"
+							class="btn btn--secondary"
 							id="imageUploadBtn"
 							onclick="document.getElementById('imageUpload').click()"
 						>
@@ -86,64 +127,64 @@
 						</button>
 					</div>
 
-					<button class="btn btn-primary" onclick="generatePoster()">
+					<button class="btn btn--primary" onclick="generatePoster()">
 						Gerar Pôster
 					</button>
 				</div>
 
-				<div class="card">
-					<h2>Preview</h2>
+				<div class="card poster-generator__preview-card">
+					<h2 class="card__title">Preview</h2>
 
-					<div class="preview-container">
-						<div class="preview-area" id="previewArea">
-							<div class="preview-placeholder" id="placeholder">
+					<div class="preview">
+						<div class="preview__area" id="previewArea">
+							<div class="preview__placeholder" id="placeholder">
 								<div>
 									📷<br />
 									Preencha os dados e gere seu pôster
 								</div>
 							</div>
-							<div id="posterContent" class="hidden">
+							<div id="posterContent" class="u-hidden preview__content">
 								<img
 									id="posterPreview"
-									class="polaroid-image"
+									class="preview__image"
 									alt="Preview do Pôster"
 								/>
-								<div class="poster-info">
-									<div class="title-year-row">
-										<div class="poster-title" id="previewTitle"></div>
-										<div class="poster-year" id="previewYear"></div>
+								<div class="preview__info">
+									<div class="info__title-year">
+										<div class="info__title" id="previewTitle"></div>
+										<div class="info__year" id="previewYear"></div>
 									</div>
 
-									<div class="info-row" id="nativeRow">
-										<div class="info-label">native title</div>
-										<div class="info-value" id="previewNative"></div>
+									<div class="info__row" id="nativeRow">
+										<div class="info__label">native title</div>
+										<div class="info__value" id="previewNative"></div>
 									</div>
 
-									<div class="info-row" id="genreRow">
-										<div class="info-label">genre</div>
-										<div class="info-value" id="previewGenre"></div>
+									<div class="info__row" id="genreRow">
+										<div class="info__label">genre</div>
+										<div class="info__value" id="previewGenre"></div>
 									</div>
 
-									<div class="info-row" id="directorRow">
-										<div class="info-label">directed by</div>
-										<div class="info-value" id="previewDirector"></div>
+									<div class="info__row" id="directorRow">
+										<div class="info__label">directed by</div>
+										<div class="info__value" id="previewDirector"></div>
 									</div>
 
-									<div class="info-row" id="writerRow">
-										<div class="info-label">written by</div>
-										<div class="info-value" id="previewWriter"></div>
+									<div class="info__row" id="writerRow">
+										<div class="info__label">written by</div>
+										<div class="info__value" id="previewWriter"></div>
 									</div>
 
-									<div class="info-row" id="starringRow">
-										<div class="info-label">starring</div>
-										<div class="info-value" id="previewStarring"></div>
+									<div class="info__row" id="starringRow">
+										<div class="info__label">starring</div>
+										<div class="info__value" id="previewStarring"></div>
 									</div>
 								</div>
 							</div>
 						</div>
 
 						<button
-							class="btn btn-download hidden"
+							class="btn btn--download u-hidden"
 							id="downloadBtn"
 							onclick="downloadPoster()"
 						>
@@ -156,9 +197,11 @@
 
 		<canvas id="posterCanvas"></canvas>
 
-		<footer role="contentinfo">
-			<a href="../../index.html" class="back-button">← Voltar ao Showcase</a>
-			<p>&copy; 2025. Todos os direitos reservados.</p>
+		<footer class="footer" role="contentinfo">
+			<a href="../../index.html" class="footer__link back-button"
+				>← Voltar ao Showcase</a
+			>
+			<p class="footer__text">&copy; 2025. Todos os direitos reservados.</p>
 		</footer>
 
 		<script src="./js/script.js"></script>
