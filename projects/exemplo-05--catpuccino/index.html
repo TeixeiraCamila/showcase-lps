@@ -1,0 +1,2462 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<!-- Essential Meta Tags -->
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+		<!-- SEO Meta Tags -->
+		<meta
+			name="description"
+			content="Catpuccino - Café premium com ambiente retrô-moderno em Birigui. Perfeito para creators e amigos."
+		/>
+		<meta name="keywords" content="café, catpuccino, birigui, restaurante" />
+		<meta name="theme-color" content="#3D2817" />
+
+		<!-- Canonical URL -->
+		<link rel="canonical" href="https://catpuccino.com.br/" />
+
+		<!-- Open Graph / Social Media Meta Tags -->
+		<meta property="og:title" content="Catpuccino - Café com Aconchego" />
+		<meta
+			property="og:description"
+			content="Café premium com ambiente retrô-moderno em Birigui. Venha desfrutar de aconchego e qualidade."
+		/>
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://catpuccino.com.br/" />
+		<meta
+			property="og:image"
+			content="https://catpuccino.com.br/og-image.jpg"
+		/>
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+		<meta property="og:locale" content="pt_BR" />
+
+		<!-- Unified CSS with CSS Variables -->
+		<link rel="stylesheet" href="./css/style.css" />
+
+		<!-- Phosphor Icons - Async Load -->
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+			media="print"
+			onload="this.media='all'"
+		/>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
+			media="print"
+			onload="this.media='all'"
+		/>
+		<noscript>
+			<link
+				rel="stylesheet"
+				type="text/css"
+				href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+			/>
+			<link
+				rel="stylesheet"
+				type="text/css"
+				href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
+			/>
+		</noscript>
+
+		<!-- Structured Data - JSON-LD Schema.org -->
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "LocalBusiness",
+				"name": "Catpuccino",
+				"description": "Café premium com ambiente retrô-moderno em Birigui",
+				"url": "https://catpuccino.com.br/",
+				"address": {
+					"@type": "PostalAddress",
+					"addressLocality": "Birigui",
+					"addressRegion": "São Paulo",
+					"addressCountry": "BR"
+				}
+			}
+		</script>
+
+		<title>Catpuccino - Café com Aconchego | Birigui, São Paulo</title>
+		<style>
+			/* ============================================
+   CATPUCCINO - UNIFIED CSS WITH CSS VARIABLES
+   Light/Dark Mode via CSS Variables Only
+   ============================================ */
+
+			:root {
+				/* Light Mode Color Palette */
+				--primary-dark: #7d7362;
+				--primary-medium: #8c8a80;
+				--primary-light: #d2c8b6;
+				--accent-gold: #d2c8b6;
+				--accent-warm: #727c64;
+				--neutral-dark: #3b3f1a;
+				--neutral-medium: #8c8a80;
+				--neutral-light: #d2c8b6;
+				--neutral-bg: #fafaf8;
+				--text-primary: #492e12;
+				--text-secondary: #7d7362;
+				--border-color: #d2c8b6;
+				--shadow-soft: #00000014;
+				--shadow-medium: #0000001f;
+				--shadow-deep: #00000029;
+				--header-bg: rgba(255, 255, 255, 0.95);
+				--hero-overlay: rgba(0, 0, 0, 0.5);
+				--btn-primary-bg: #3d2817;
+				--btn-primary-color: #fafaf8;
+				--btn-secondary-bg: #fafaf8;
+				--btn-secondary-color: #3d2817;
+				--testimonials-bg: linear-gradient(135deg, #fafaf8 0%, #f5f3f0 100%);
+				--testimonial-card-bg: white;
+				--testimonial-card-border: #e8e3db;
+				--testimonial-text: #555555;
+				--footer-bg: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+				--footer-text: white;
+				--footer-link: #d4a574;
+
+				/* Typography */
+				--font-primary: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+					sans-serif;
+				--font-secondary: 'Georgia', serif;
+
+				/* Transitions */
+				--transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+				--transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+				--transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+			}
+
+			html[data-theme='dark'] {
+				--primary-dark: #d2c8b6;
+				--primary-medium: #8c8a80;
+				--primary-light: #7d7362;
+				--accent-gold: #d2c8b6;
+				--accent-warm: #727c64;
+				--neutral-dark: #000000;
+				--neutral-medium: #3b3f1a;
+				--neutral-light: #492e12;
+				--neutral-bg: #1a1a1a;
+				--text-primary: #d2c8b6;
+				--text-secondary: #8c8a80;
+				--border-color: #492e12;
+				--shadow-soft: #0000004d;
+				--shadow-medium: #00000080;
+				--shadow-deep: #000000b3;
+				--header-bg: rgba(15, 15, 15, 0.95);
+				--hero-overlay: rgba(0, 0, 0, 0.6);
+				--btn-primary-bg: #3d2817;
+				--btn-primary-color: #fafaf8;
+				--btn-secondary-bg: #fafaf8;
+				--btn-secondary-color: #3d2817;
+				--testimonials-bg: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+				--testimonial-card-bg: #1e1e1e;
+				--testimonial-card-border: #2a2a2a;
+				--testimonial-text: #d4a574;
+				--footer-bg: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+				--footer-text: #d2c8b6;
+				--footer-link: #d4a574;
+			}
+
+			/* ============================================
+   RESET & BASE STYLES
+   ============================================ */
+
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			html {
+				scroll-behavior: smooth;
+			}
+
+			body {
+				font-family: var(--font-primary);
+				color: var(--text-primary);
+				background-color: var(--neutral-bg);
+				line-height: 1.6;
+				overflow-x: hidden;
+			}
+
+			/* ============================================
+   UTILITIES
+   ============================================ */
+
+			.container {
+				max-width: 1200px;
+				margin: 0 auto;
+				padding: 0 2rem;
+			}
+
+			/* Phosphor Icons */
+			i.ph {
+				font-size: inherit;
+				font-weight: 600;
+				line-height: 1;
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.icon i.ph,
+			.highlight-icon i.ph {
+				font-size: 1.8rem;
+			}
+
+			.menu-tabs button i.ph {
+				margin-right: 0.5rem;
+				font-size: 1.2rem;
+			}
+
+			.section-title {
+				font-size: clamp(2rem, 5vw, 3.5rem);
+				font-weight: 700;
+				color: var(--text-primary);
+				margin-bottom: 0.5rem;
+				letter-spacing: -0.5px;
+			}
+
+			.section-subtitle {
+				font-size: clamp(1rem, 2vw, 1.2rem);
+				color: var(--text-secondary);
+				margin-bottom: 3rem;
+			}
+
+			.accent {
+				color: var(--primary-dark);
+				position: relative;
+				font-weight: 700;
+			}
+
+			/* Buttons */
+			.btn {
+				display: inline-block;
+				padding: 0.875rem 2rem;
+				border: none;
+				border-radius: 8px;
+				font-size: 1rem;
+				font-weight: 600;
+				cursor: pointer;
+				transition: var(--transition);
+				text-decoration: none;
+				text-align: center;
+				box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+			}
+
+			.btn-primary {
+				background: var(--btn-primary-bg);
+				color: var(--btn-primary-color);
+			}
+
+			.btn-primary:hover {
+				background: #2c1810;
+				transform: translateY(-3px);
+				box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
+			}
+
+			.btn-secondary {
+				background: var(--btn-secondary-bg);
+				color: var(--btn-secondary-color);
+				border: 2px solid var(--btn-secondary-color);
+				font-weight: 700;
+			}
+
+			.btn-secondary:hover {
+				background: var(--primary-dark);
+				color: white;
+				transform: translateY(-3px);
+				box-shadow: 0 12px 28px rgba(139, 115, 85, 0.3);
+			}
+
+			/* ============================================
+   THEME TOGGLE
+   ============================================ */
+
+			.theme-toggle {
+				position: fixed;
+				bottom: 2rem;
+				right: 2rem;
+				z-index: 1001;
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				border: 2px solid var(--primary-dark);
+				background: var(--neutral-light);
+				cursor: pointer;
+				transition: var(--transition);
+				font-size: 1.5rem;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				color: var(--primary-dark);
+			}
+
+			.theme-toggle:hover {
+				background: var(--primary-light);
+				transform: scale(1.1);
+			}
+
+			/* ============================================
+   HEADER & NAVIGATION
+   ============================================ */
+
+			.header {
+				position: sticky;
+				top: 0;
+				z-index: 999;
+				background: var(--header-bg);
+				backdrop-filter: blur(10px);
+				border-bottom: 1px solid var(--border-color);
+				animation: slideDownIn 0.5s ease;
+			}
+
+			@keyframes slideDownIn {
+				from {
+					transform: translateY(-100%);
+					opacity: 0;
+				}
+
+				to {
+					transform: translateY(0);
+					opacity: 1;
+				}
+			}
+
+			.navbar {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding: 1.5rem 2rem;
+				max-width: 1200px;
+				margin: 0 auto;
+			}
+
+			.logo {
+				font-size: 1.5rem;
+				font-weight: 700;
+				color: var(--primary-dark);
+				letter-spacing: -0.5px;
+			}
+
+			.nav-menu {
+				display: flex;
+				gap: 3rem;
+				list-style: none;
+				transition: var(--transition);
+			}
+
+			.nav-menu a {
+				color: var(--text-secondary);
+				text-decoration: none;
+				font-weight: 500;
+				font-size: 0.95rem;
+				position: relative;
+				transition: color 0.3s ease;
+			}
+
+			.nav-menu a::after {
+				content: '';
+				position: absolute;
+				bottom: -6px;
+				left: 0;
+				width: 0;
+				height: 2px;
+				background: var(--primary-dark);
+				transition: width 0.3s ease;
+			}
+
+			.nav-menu a:hover {
+				color: var(--primary-dark);
+			}
+
+			.nav-menu a:hover::after {
+				width: 100%;
+			}
+
+			.menu-toggle {
+				display: none;
+				background: none;
+				border: none;
+				font-size: 1.5rem;
+				cursor: pointer;
+				color: var(--primary-dark);
+				padding: 0.5rem;
+				transition: var(--transition);
+			}
+
+			.menu-toggle:hover {
+				transform: scale(1.1);
+			}
+
+			.nav-menu.active {
+				display: flex !important;
+			}
+
+			/* ============================================
+   HERO SECTION
+   ============================================ */
+
+			.hero {
+				position: relative;
+				min-height: 100vh;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				overflow: hidden;
+				padding: 2rem 0;
+				background: url('../assets/hero-bg.png') center/cover no-repeat,
+					linear-gradient(135deg, #2c1810 0%, #3d2817 50%, #4a3728 100%);
+			}
+
+			.hero-overlay {
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background: var(--hero-overlay);
+				z-index: 0;
+			}
+
+			/* Floating Coffee Cup Icons */
+			.floating-icon {
+				position: absolute;
+				opacity: 0.25;
+				z-index: 1;
+				filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+			}
+
+			.icon-1 {
+				top: 15%;
+				right: 8%;
+				animation: floatIcon 5s ease-in-out infinite;
+			}
+
+			.icon-2 {
+				bottom: 20%;
+				left: 10%;
+				animation: floatIcon 6s ease-in-out infinite reverse;
+			}
+
+			.footer-icon-1 {
+				top: 30px;
+				right: 20%;
+				animation: floatIcon 7s ease-in-out infinite;
+			}
+
+			.footer-icon-2 {
+				bottom: 40px;
+				left: 15%;
+				animation: floatIcon 8s ease-in-out infinite reverse;
+			}
+
+			@keyframes floatIcon {
+				0%,
+				100% {
+					transform: translateY(0px) scale(1);
+					opacity: 0.25;
+				}
+
+				50% {
+					transform: translateY(20px) scale(1.05);
+					opacity: 0.35;
+				}
+			}
+
+			.hero-content {
+				position: relative;
+				z-index: 1;
+				max-width: 700px;
+				text-align: center;
+				animation: fadeInUp 1s ease 0.2s both;
+				padding: 2rem;
+			}
+
+			.hero-title {
+				font-size: clamp(2.5rem, 8vw, 4.5rem);
+				font-weight: 800;
+				color: #fafaf8;
+				margin-bottom: 1.5rem;
+				line-height: 1.2;
+				letter-spacing: -1px;
+				text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+			}
+
+			.hero-title .accent {
+				background: linear-gradient(135deg, #d4a574, #e8c9a0);
+				background-clip: text;
+				text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+			}
+
+			.hero-subtitle {
+				font-size: clamp(1rem, 3vw, 1.3rem);
+				color: #e8d9c8;
+				margin-bottom: 2.5rem;
+				line-height: 1.7;
+				text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+			}
+
+			.hero-cta {
+				display: flex;
+				gap: 1.5rem;
+				justify-content: center;
+				flex-wrap: wrap;
+			}
+
+			@keyframes fadeInUp {
+				from {
+					opacity: 0;
+					transform: translateY(30px);
+				}
+
+				to {
+					opacity: 1;
+					transform: translateY(0);
+				}
+			}
+
+			/* ============================================
+   EXPERIENCE SECTION
+   ============================================ */
+
+			.experience {
+				padding: 6rem 0;
+				background: var(--neutral-bg);
+			}
+
+			.experience-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+				gap: 2.5rem;
+				margin-bottom: 4rem;
+			}
+
+			.experience-card {
+				background: var(--neutral-light);
+				padding: 2.5rem;
+				border-radius: 12px;
+				border-left: 4px solid var(--primary-dark);
+				box-shadow: 0 2px 8px var(--shadow-soft);
+				transition: var(--transition);
+				animation: fadeInUp 0.8s ease;
+			}
+
+			.experience-card:hover {
+				transform: translateY(-8px);
+				box-shadow: 0 12px 24px var(--shadow-medium);
+				border-left-color: var(--accent-warm);
+			}
+
+			.experience-card .icon {
+				font-size: 3rem;
+				margin-bottom: 1rem;
+			}
+
+			.experience-card h3 {
+				font-size: 1.3rem;
+				color: var(--primary-dark);
+				margin-bottom: 0.5rem;
+				font-weight: 700;
+			}
+
+			.experience-card p {
+				color: var(--text-secondary);
+				line-height: 1.7;
+				font-size: 0.95rem;
+			}
+
+			.experience-highlight {
+				background: linear-gradient(
+					135deg,
+					var(--primary-light) 0%,
+					var(--accent-warm) 100%
+				);
+				padding: 3rem;
+				border-radius: 12px;
+				color: white;
+				text-align: center;
+				animation: fadeInUp 0.8s ease 0.4s both;
+			}
+
+			.experience-highlight h3 {
+				font-size: 2rem;
+				margin-bottom: 1rem;
+				font-weight: 700;
+			}
+
+			.experience-highlight p {
+				font-size: 1.1rem;
+				opacity: 0.95;
+				line-height: 1.8;
+			}
+
+			/* ============================================
+   MENU SECTION
+   ============================================ */
+
+			.menu {
+				padding: 6rem 0;
+				background: var(--neutral-light);
+			}
+
+			.menu-tabs {
+				display: flex;
+				gap: 1rem;
+				justify-content: center;
+				margin-bottom: 3rem;
+				flex-wrap: wrap;
+			}
+
+			.tab-btn {
+				padding: 0.75rem 1.5rem;
+				border: 2px solid var(--border-color);
+				background: transparent;
+				color: var(--text-secondary);
+				border-radius: 25px;
+				cursor: pointer;
+				font-weight: 600;
+				transition: var(--transition-fast);
+			}
+
+			.tab-btn.active {
+				background: var(--primary-dark);
+				color: white;
+				border-color: var(--primary-dark);
+			}
+
+			.tab-btn:hover {
+				border-color: var(--primary-dark);
+				color: var(--primary-dark);
+			}
+
+			.menu-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+				gap: 2rem;
+			}
+
+			.menu-item {
+				background: var(--neutral-bg);
+				padding: 2rem;
+				border-radius: 12px;
+				border-top: 3px solid transparent;
+				transition: var(--transition);
+				animation: fadeIn 0.6s ease;
+			}
+
+			.menu-item:hover {
+				transform: translateY(-4px);
+				border-top-color: var(--primary-dark);
+				box-shadow: 0 8px 16px var(--shadow-soft);
+			}
+
+			.menu-item.hidden {
+				display: none;
+			}
+
+			.menu-header {
+				display: flex;
+				justify-content: space-between;
+				align-items: flex-start;
+				margin-bottom: 0.75rem;
+			}
+
+			.menu-header h4 {
+				font-size: 1.1rem;
+				color: var(--primary-dark);
+				font-weight: 700;
+			}
+
+			.price {
+				color: var(--accent-warm);
+				font-weight: 700;
+				font-size: 1.1rem;
+			}
+
+			.menu-item p {
+				color: var(--text-secondary);
+				font-size: 0.9rem;
+				line-height: 1.6;
+			}
+
+			@keyframes fadeIn {
+				from {
+					opacity: 0;
+				}
+
+				to {
+					opacity: 1;
+				}
+			}
+
+			/* ============================================
+   MASCOT SECTION
+   ============================================ */
+
+			.mascot {
+				padding: 6rem 0;
+				background: linear-gradient(
+					135deg,
+					rgba(212, 165, 116, 0.1) 0%,
+					rgba(160, 130, 109, 0.1) 100%
+				);
+			}
+
+			.mascot-container {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 4rem;
+				align-items: center;
+				animation: fadeInUp 0.8s ease;
+			}
+
+			.mascot-visual {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.mascot-icon {
+				font-size: clamp(8rem, 20vw, 12rem);
+				animation: float 3s ease-in-out infinite;
+			}
+
+			@keyframes float {
+				0%,
+				100% {
+					transform: translateY(0);
+				}
+
+				50% {
+					transform: translateY(-20px);
+				}
+			}
+
+			.mascot-story h3 {
+				font-size: 2.5rem;
+				color: var(--primary-dark);
+				margin-bottom: 1.5rem;
+				font-weight: 700;
+			}
+
+			.mascot-story p {
+				color: var(--text-secondary);
+				line-height: 1.8;
+				margin-bottom: 2rem;
+				font-size: 1rem;
+			}
+
+			.mascot-traits {
+				background: var(--neutral-light);
+				padding: 1.5rem;
+				border-radius: 12px;
+				margin: 2rem 0;
+				border-left: 4px solid var(--primary-dark);
+			}
+
+			.trait {
+				margin-bottom: 1rem;
+				color: var(--text-secondary);
+				line-height: 1.6;
+			}
+
+			.trait:last-child {
+				margin-bottom: 0;
+			}
+
+			.trait strong {
+				color: var(--primary-dark);
+			}
+
+			.mascot-quote {
+				font-size: 1.1rem;
+				color: var(--primary-dark);
+				font-style: italic;
+				border-left: 4px solid var(--accent-gold);
+				padding-left: 1.5rem;
+				margin-top: 2rem;
+			}
+
+			/* ============================================
+   GALLERY SECTION
+   ============================================ */
+
+			.gallery {
+				padding: 6rem 0;
+				background: var(--neutral-bg);
+			}
+
+			.gallery-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+				gap: 2rem;
+			}
+
+			.gallery-item {
+				aspect-ratio: 1;
+				border-radius: 12px;
+				position: relative;
+				cursor: pointer;
+				overflow: hidden;
+				transition: var(--transition-slow);
+				box-shadow: 0 4px 12px var(--shadow-soft);
+			}
+
+			.gallery-item:hover {
+				transform: scale(1.05);
+				box-shadow: 0 12px 24px var(--shadow-medium);
+			}
+
+			.gallery-overlay {
+				position: absolute;
+				inset: 0;
+				background: rgba(0, 0, 0, 0.5);
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				color: white;
+				font-size: 1.2rem;
+				font-weight: 600;
+				opacity: 0;
+				transition: opacity 0.3s ease;
+			}
+
+			.gallery-item:hover .gallery-overlay {
+				opacity: 1;
+			}
+
+			/* ============================================
+   HIGHLIGHTS SECTION
+   ============================================ */
+
+			.highlights {
+				padding: 6rem 0;
+				background: var(--neutral-bg);
+			}
+
+			.highlights-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+				gap: 2.5rem;
+			}
+
+			.highlight-card {
+				background: var(--neutral-light);
+				padding: 2rem;
+				border-radius: 12px;
+				text-align: center;
+				transition: var(--transition);
+				box-shadow: 0 2px 8px var(--shadow-soft);
+				animation: fadeInUp 0.8s ease;
+			}
+
+			.highlight-card:hover {
+				transform: translateY(-8px);
+				box-shadow: 0 12px 24px var(--shadow-medium);
+			}
+
+			.highlight-icon {
+				font-size: 3.5rem;
+				margin-bottom: 1rem;
+			}
+
+			.highlight-card h3 {
+				font-size: 1.3rem;
+				color: var(--primary-dark);
+				margin-bottom: 1rem;
+				font-weight: 700;
+			}
+
+			.highlight-card p {
+				color: var(--text-secondary);
+				line-height: 1.7;
+				font-size: 0.95rem;
+			}
+
+			/* ============================================
+   TESTIMONIALS SECTION
+   ============================================ */
+
+			.testimonials {
+				padding: 6rem 0;
+				background: var(--testimonials-bg);
+			}
+
+			.testimonials .section-title,
+			.testimonials .section-subtitle {
+				color: var(--text-primary);
+			}
+
+			.testimonials-slider-container {
+				position: relative;
+				max-width: 700px;
+				margin: 3rem auto 0;
+				overflow: hidden;
+			}
+
+			.testimonials-slider {
+				display: flex;
+				transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+			}
+
+			.testimonial-card {
+				flex: 0 0 100%;
+				background: var(--testimonial-card-bg);
+				padding: 2.5rem;
+				border-radius: 12px;
+				border: 1px solid var(--testimonial-card-border);
+				box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+				transition: var(--transition);
+			}
+
+			.testimonial-card:hover {
+				box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+			}
+
+			.stars {
+				font-size: 1.2rem;
+				margin-bottom: 1rem;
+				display: flex;
+				gap: 0.25rem;
+			}
+
+			.testimonial-card p {
+				color: var(--testimonial-text);
+				margin-bottom: 1.5rem;
+				line-height: 1.8;
+				font-style: italic;
+			}
+
+			.testimonial-author {
+				display: flex;
+				flex-direction: column;
+			}
+
+			.testimonial-author strong {
+				color: var(--text-primary);
+				font-size: 1rem;
+			}
+
+			.testimonial-author span {
+				color: #999999;
+				font-size: 0.85rem;
+				margin-top: 0.25rem;
+			}
+
+			/* Slider Controls */
+			.slider-btn {
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				background: var(--primary-dark);
+				border: none;
+				color: white;
+				width: 44px;
+				height: 44px;
+				border-radius: 50%;
+				cursor: pointer;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 1.2rem;
+				transition: all 0.3s ease;
+				z-index: 10;
+			}
+
+			.slider-btn:hover {
+				background: var(--primary-medium);
+				transform: translateY(-50%) scale(1.1);
+			}
+
+			.slider-prev {
+				left: -60px;
+			}
+
+			.slider-next {
+				right: -60px;
+			}
+
+			.slider-dots {
+				display: flex;
+				justify-content: center;
+				gap: 0.75rem;
+				margin-top: 2rem;
+			}
+
+			.dot {
+				width: 12px;
+				height: 12px;
+				border-radius: 50%;
+				background: var(--accent-gold);
+				border: none;
+				cursor: pointer;
+				transition: all 0.3s ease;
+				opacity: 0.5;
+			}
+
+			.dot.active {
+				opacity: 1;
+				background: var(--primary-dark);
+				width: 32px;
+				border-radius: 6px;
+			}
+
+			.dot:hover {
+				opacity: 0.8;
+			}
+
+			/* ============================================
+   FOOTER
+   ============================================ */
+
+			.footer {
+				background: var(--footer-bg);
+				color: var(--footer-text);
+				padding: 4rem 0 2rem;
+				position: relative;
+				overflow: hidden;
+			}
+
+			/* Decorative Footer Shapes */
+			.footer-shape {
+				display: none;
+			}
+
+			.footer-shape-1 {
+				display: none;
+			}
+
+			.footer-shape-2 {
+				display: none;
+			}
+
+			.footer-shape-3 {
+				display: none;
+			}
+
+			.footer-content {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+				gap: 3rem;
+				margin-bottom: 2rem;
+				position: relative;
+				z-index: 1;
+			}
+
+			.footer-section h4 {
+				font-size: 1.1rem;
+				margin-bottom: 1rem;
+				color: var(--footer-link);
+				font-weight: 700;
+				letter-spacing: 0.5px;
+			}
+
+			.footer-section p {
+				color: rgba(255, 255, 255, 0.85);
+				line-height: 1.7;
+				font-size: 0.95rem;
+			}
+
+			.footer-section a {
+				color: var(--footer-link);
+				text-decoration: none;
+				transition: color 0.3s ease;
+				font-weight: 500;
+			}
+
+			.footer-section a:hover {
+				color: #e8c9a0;
+			}
+
+			.social-links {
+				display: flex;
+				gap: 1.5rem;
+			}
+
+			.social-links a {
+				font-size: 1.5rem;
+				transition: var(--transition-fast);
+				color: var(--footer-link);
+			}
+
+			.social-links a:hover {
+				transform: translateY(-4px);
+				color: #e8c9a0;
+			}
+
+			.footer-divider {
+				height: 1px;
+				background: rgba(212, 165, 116, 0.3);
+				margin-bottom: 2rem;
+				position: relative;
+				z-index: 1;
+			}
+
+			.footer-bottom {
+				text-align: center;
+				color: rgba(255, 255, 255, 0.75);
+				font-size: 0.9rem;
+				position: relative;
+				z-index: 1;
+			}
+
+			.footer-bottom p {
+				margin-bottom: 0.5rem;
+			}
+
+			.link-secondary {
+				color: var(--footer-link);
+				text-decoration: none;
+				transition: color 0.3s ease;
+			}
+
+			.link-secondary:hover {
+				color: #e8c9a0;
+			}
+
+			/* ============================================
+   RESPONSIVE DESIGN - TABLET
+   ============================================ */
+
+			@media (max-width: 768px) {
+				.container {
+					padding: 0 1.5rem;
+				}
+
+				.nav-menu {
+					position: absolute;
+					top: 100%;
+					left: 0;
+					right: 0;
+					flex-direction: column;
+					gap: 0;
+					background: var(--header-bg);
+					border-bottom: 1px solid var(--border-color);
+					box-shadow: 0 4px 12px var(--shadow-soft);
+					padding: 1rem 0;
+					display: none !important;
+				}
+
+				.nav-menu.active {
+					display: flex !important;
+				}
+
+				.nav-menu li {
+					padding: 0;
+				}
+
+				.nav-menu a {
+					display: block;
+					padding: 1rem 2rem;
+					border-radius: 0;
+				}
+
+				.nav-menu a::after {
+					display: none;
+				}
+
+				.nav-menu a:hover {
+					background: var(--neutral-light);
+					color: var(--primary-dark);
+				}
+
+				.menu-toggle {
+					display: block;
+				}
+
+				.hero {
+					min-height: 80vh;
+				}
+
+				.hero-content {
+					padding: 1.5rem;
+				}
+
+				.mascot-container {
+					grid-template-columns: 1fr;
+					gap: 2rem;
+				}
+
+				.mascot-visual {
+					justify-content: center;
+				}
+
+				.mascot-story h3 {
+					font-size: 2rem;
+				}
+
+				.experience,
+				.menu,
+				.mascot,
+				.gallery,
+				.highlights,
+				.testimonials {
+					padding: 4rem 0;
+				}
+
+				.hero-cta {
+					flex-direction: column;
+					align-items: center;
+				}
+
+				.btn {
+					width: 100%;
+					max-width: 300px;
+				}
+			}
+
+			/* ============================================
+   RESPONSIVE DESIGN - MOBILE
+   ============================================ */
+
+			@media (max-width: 480px) {
+				.theme-toggle {
+					width: 45px;
+					height: 45px;
+					font-size: 1.2rem;
+					bottom: 1rem;
+					right: 1rem;
+				}
+
+				.navbar {
+					padding: 1rem;
+				}
+
+				.logo {
+					font-size: 1.2rem;
+				}
+
+				.nav-menu {
+					display: none;
+				}
+
+				.section-title {
+					font-size: 2rem;
+				}
+
+				.section-subtitle {
+					font-size: 0.95rem;
+					margin-bottom: 2rem;
+				}
+
+				.experience-grid,
+				.menu-grid,
+				.highlights-grid {
+					grid-template-columns: 1fr;
+					gap: 1.5rem;
+				}
+
+				.testimonials-slider-container {
+					max-width: 100%;
+					padding: 0 1rem;
+				}
+
+				.slider-prev,
+				.slider-next {
+					width: 36px;
+					height: 36px;
+					font-size: 1rem;
+				}
+
+				.slider-prev {
+					left: -45px;
+				}
+
+				.slider-next {
+					right: -45px;
+				}
+
+				.gallery-grid {
+					grid-template-columns: repeat(2, 1fr);
+					gap: 1rem;
+				}
+
+				.footer-content {
+					grid-template-columns: 1fr;
+					gap: 2rem;
+				}
+
+				.experience,
+				.menu,
+				.mascot,
+				.gallery,
+				.highlights,
+				.testimonials {
+					padding: 3rem 0;
+				}
+
+				.hero {
+					min-height: 70vh;
+				}
+
+				.hero-title {
+					font-size: 2.5rem;
+				}
+
+				.hero-subtitle {
+					font-size: 1rem;
+				}
+
+				.menu-tabs {
+					flex-direction: column;
+					gap: 0.5rem;
+				}
+
+				.tab-btn {
+					width: 100%;
+				}
+
+				.mascot-icon {
+					font-size: 8rem;
+				}
+
+				.experience-highlight {
+					padding: 2rem 1.5rem;
+				}
+			}
+
+			/* ============================================
+   ANIMATION UTILITIES
+   ============================================ */
+
+			@keyframes slideDown {
+				from {
+					opacity: 0;
+					transform: translateY(-20px);
+				}
+
+				to {
+					opacity: 1;
+					transform: translateY(0);
+				}
+			}
+
+			@keyframes slideUp {
+				from {
+					opacity: 0;
+					transform: translateY(20px);
+				}
+
+				to {
+					opacity: 1;
+					transform: translateY(0);
+				}
+			}
+
+			@keyframes pulse {
+				0%,
+				100% {
+					opacity: 1;
+				}
+
+				50% {
+					opacity: 0.7;
+				}
+			}
+
+			@keyframes rotate {
+				from {
+					transform: rotate(0deg);
+				}
+
+				to {
+					transform: rotate(360deg);
+				}
+			}
+		</style>
+	</head>
+
+	<body itemscope itemtype="https://schema.org/LocalBusiness">
+		<!-- Sticky Navigation Header -->
+		<header class="header" role="banner">
+			<nav class="navbar" role="navigation" aria-label="Navegação Principal">
+				<div class="logo" itemprop="name">Catpuccino</div>
+				<ul class="nav-menu">
+					<li><a href="#experience">Experience</a></li>
+					<li><a href="#menu">Menu</a></li>
+					<li><a href="#mascot">Mascote</a></li>
+					<li><a href="#gallery">Galeria</a></li>
+					<li><a href="#testimonials">Depoimentos</a></li>
+					<li><a href="#contact">Contato</a></li>
+				</ul>
+				<button
+					class="menu-toggle"
+					aria-label="Abrir/fechar menu de navegação"
+					aria-expanded="false"
+				>
+					<i class="ph ph-list"></i>
+				</button>
+			</nav>
+		</header>
+
+		<!-- Theme Toggle -->
+		<button
+			class="theme-toggle"
+			aria-label="Alternar modo escuro/claro"
+			title="Modo escuro/claro"
+		>
+			<i class="ph ph-moon"></i>
+		</button>
+
+		<!-- Main Content -->
+		<main role="main">
+			<section class="hero" id="home">
+				<!-- <div class="hero-overlay"></div> -->
+
+				<!-- Decorative Shapes - Floating Coffee Cup Icons -->
+				<svg
+					class="hero-shape hero-shape-1 floating-icon icon-1"
+					xmlns="http://www.w3.org/2000/svg"
+					width="60"
+					height="60"
+					fill="currentColor"
+					viewBox="0 0 256 256"
+				>
+					<path
+						d="M211.75,44.25C195,27.47,170.37,20.79,142.46,25.44c-26.91,4.49-53.87,19.09-75.9,41.12s-36.63,49-41.12,75.9c-4.65,27.91,2,52.51,18.81,69.29C57.54,225.05,75.75,232,96.62,232a103.66,103.66,0,0,0,16.92-1.44c26.91-4.49,53.87-19.09,75.9-41.12s36.63-49,41.12-75.9C235.21,85.63,228.53,61,211.75,44.25ZM77.87,77.87C102.56,53.19,133,39.93,159.15,39.93a62.26,62.26,0,0,1,29,6.67A108.48,108.48,0,0,0,157.1,63.54c-19.2,15.16-31.63,36.32-36.94,62.89-9.72,48.58-44.7,65.18-67.48,70.84C28.71,168.76,39.4,116.35,77.87,77.87ZM178.13,178.13c-34.69,34.68-80.71,46.78-110.32,31.27A108.72,108.72,0,0,0,98.9,192.46c19.2-15.16,31.63-36.32,36.94-62.89,9.72-48.58,44.7-65.18,67.48-70.84C227.29,87.24,216.6,139.65,178.13,178.13Z"
+					></path>
+				</svg>
+
+				<svg
+					class="hero-shape hero-shape-2 floating-icon icon-2"
+					xmlns="http://www.w3.org/2000/svg"
+					width="60"
+					height="60"
+					fill="currentColor"
+					viewBox="0 0 256 256"
+				>
+					<path
+						d="M211.75,44.25C195,27.47,170.37,20.79,142.46,25.44c-26.91,4.49-53.87,19.09-75.9,41.12s-36.63,49-41.12,75.9c-4.65,27.91,2,52.51,18.81,69.29C57.54,225.05,75.75,232,96.62,232a103.66,103.66,0,0,0,16.92-1.44c26.91-4.49,53.87-19.09,75.9-41.12s36.63-49,41.12-75.9C235.21,85.63,228.53,61,211.75,44.25ZM77.87,77.87C102.56,53.19,133,39.93,159.15,39.93a62.26,62.26,0,0,1,29,6.67A108.48,108.48,0,0,0,157.1,63.54c-19.2,15.16-31.63,36.32-36.94,62.89-9.72,48.58-44.7,65.18-67.48,70.84C28.71,168.76,39.4,116.35,77.87,77.87ZM178.13,178.13c-34.69,34.68-80.71,46.78-110.32,31.27A108.72,108.72,0,0,0,98.9,192.46c19.2-15.16,31.63-36.32,36.94-62.89,9.72-48.58,44.7-65.18,67.48-70.84C227.29,87.24,216.6,139.65,178.13,178.13Z"
+					></path>
+				</svg>
+
+				<svg
+					class="hero-shape hero-shape-3 floating-icon"
+					xmlns="http://www.w3.org/2000/svg"
+					width="60"
+					height="60"
+					fill="currentColor"
+					viewBox="0 0 256 256"
+				>
+					<path
+						d="M211.75,44.25C195,27.47,170.37,20.79,142.46,25.44c-26.91,4.49-53.87,19.09-75.9,41.12s-36.63,49-41.12,75.9c-4.65,27.91,2,52.51,18.81,69.29C57.54,225.05,75.75,232,96.62,232a103.66,103.66,0,0,0,16.92-1.44c26.91-4.49,53.87-19.09,75.9-41.12s36.63-49,41.12-75.9C235.21,85.63,228.53,61,211.75,44.25ZM77.87,77.87C102.56,53.19,133,39.93,159.15,39.93a62.26,62.26,0,0,1,29,6.67A108.48,108.48,0,0,0,157.1,63.54c-19.2,15.16-31.63,36.32-36.94,62.89-9.72,48.58-44.7,65.18-67.48,70.84C28.71,168.76,39.4,116.35,77.87,77.87ZM178.13,178.13c-34.69,34.68-80.71,46.78-110.32,31.27A108.72,108.72,0,0,0,98.9,192.46c19.2-15.16,31.63-36.32,36.94-62.89,9.72-48.58,44.7-65.18,67.48-70.84C227.29,87.24,216.6,139.65,178.13,178.13Z"
+					></path>
+				</svg>
+
+				<div class="hero-content">
+					<h1 class="hero-title">
+						Bem-vindo ao <span class="accent">Catpuccino</span>
+					</h1>
+					<p class="hero-subtitle">
+						Onde o café encontra o aconchego. Uma experiência única para você.
+					</p>
+					<div class="hero-cta">
+						<a href="#menu" class="btn btn-primary">Explorar Menu</a>
+						<a href="#contact" class="btn btn-secondary">Reservar</a>
+					</div>
+				</div>
+				<!-- <div class="hero-parallax">
+      <div class="parallax-bg" style="background: linear-gradient(135deg, #D4A574 0%, #A0826D 100%);"></div>
+    </div> -->
+			</section>
+
+			<!-- Experience / Concept Section -->
+			<section class="experience" id="experience">
+				<div class="container">
+					<h2 class="section-title">Nossa Experiência</h2>
+					<p class="section-subtitle">
+						Descobra o conceito por trás do Catpuccino
+					</p>
+
+					<div class="experience-grid">
+						<article class="experience-card">
+							<div class="icon"><i class="ph-fill ph-coffee"></i></div>
+							<h3>Café Premium</h3>
+							<p>
+								Grãos selecionados, torrados artesanalmente e preparados com
+								amor. Cada xícara conta uma história.
+							</p>
+						</article>
+
+						<article class="experience-card">
+							<div class="icon"><i class="ph-fill ph-house"></i></div>
+							<h3>Aconchego Total</h3>
+							<p>
+								Um ambiente acolhedor e retrô-moderno, perfeito para trabalhar,
+								estudar ou relaxar com amigos.
+							</p>
+						</article>
+
+						<article class="experience-card">
+							<div class="icon"><i class="ph-fill ph-palette"></i></div>
+							<h3>Espaço Criativo</h3>
+							<p>
+								Inspirado no mundo dos creators. Um lugar para conexões,
+								criatividade e compartilhamento de ideias.
+							</p>
+						</article>
+
+						<article class="experience-card">
+							<div class="icon"><i class="ph-fill ph-smiley"></i></div>
+							<h3>Mascote Fofo</h3>
+							<p>
+								Nosso querido mascote acompanha sua jornada no Catpuccino,
+								trazendo alegria a cada visita.
+							</p>
+						</article>
+					</div>
+
+					<div class="experience-highlight">
+						<h3>Birigui - São Paulo</h3>
+						<p>
+							Localizado no coração da cidade, o Catpuccino é mais que um café.
+							É um refúgio para quem busca qualidade, aconchego e uma comunidade
+							acolhedora.
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- Main Menu / Offers Section -->
+			<section class="menu" id="menu">
+				<div class="container">
+					<h2 class="section-title">Menu Especial</h2>
+					<p class="section-subtitle">
+						Bebidas e petiscos que fazem sua experiência única
+					</p>
+
+					<div class="menu-tabs">
+						<button class="tab-btn active" data-category="beverages">
+							<i class="ph-fill ph-coffee"></i> Bebidas
+						</button>
+						<button class="tab-btn" data-category="snacks">
+							<i class="ph-fill ph-croissant"></i> Petiscos
+						</button>
+						<button class="tab-btn" data-category="specials">
+							<i class="ph-fill ph-star"></i> Especiais
+						</button>
+					</div>
+
+					<div class="menu-grid" id="menuGrid">
+						<!-- Beverages -->
+						<div class="menu-item" data-category="beverages">
+							<div class="menu-header">
+								<h4>Catpuccino Clássico</h4>
+								<span class="price">R$ 12,00</span>
+							</div>
+							<p>
+								Espresso cremoso com espuma de leite e um toque de canela. O
+								nosso grande destaque.
+							</p>
+						</div>
+
+						<div class="menu-item" data-category="beverages">
+							<div class="menu-header">
+								<h4>Café da Casa</h4>
+								<span class="price">R$ 8,50</span>
+							</div>
+							<p>Café artesanal coado com água filtrada. Simples e perfeito.</p>
+						</div>
+
+						<div class="menu-item" data-category="beverages">
+							<div class="menu-header">
+								<h4>Mocha Retrô</h4>
+								<span class="price">R$ 14,50</span>
+							</div>
+							<p>
+								Mistura perfeita de café, chocolate belga e calor. Um clássico
+								reinventado.
+							</p>
+						</div>
+
+						<div class="menu-item" data-category="beverages">
+							<div class="menu-header">
+								<h4>Café Gelado Criativo</h4>
+								<span class="price">R$ 11,00</span>
+							</div>
+							<p>Café coado gelado com gelo artesanal e xarope de baunilha.</p>
+						</div>
+
+						<!-- Snacks -->
+						<div class="menu-item" data-category="snacks">
+							<div class="menu-header">
+								<h4>Croissant Manteiga</h4>
+								<span class="price">R$ 7,50</span>
+							</div>
+							<p>
+								Croissant folhado quentinho, sabor clássico que nunca sai de
+								moda.
+							</p>
+						</div>
+
+						<div class="menu-item" data-category="snacks">
+							<div class="menu-header">
+								<h4>Bolo de Cenoura Úmido</h4>
+								<span class="price">R$ 8,00</span>
+							</div>
+							<p>
+								Receita caseira com cobertura de cream cheese feita na hora.
+							</p>
+						</div>
+
+						<div class="menu-item" data-category="snacks">
+							<div class="menu-header">
+								<h4>Sanduíche Artesanal</h4>
+								<span class="price">R$ 15,00</span>
+							</div>
+							<p>
+								Pão caseiro com ingredientes premium: presunto, queijo e alface
+								fresca.
+							</p>
+						</div>
+
+						<div class="menu-item" data-category="snacks">
+							<div class="menu-header">
+								<h4>Cookie de Chocolate</h4>
+								<span class="price">R$ 5,50</span>
+							</div>
+							<p>Cookie macio com gotas de chocolate belga. Feito com amor.</p>
+						</div>
+
+						<!-- Specials -->
+						<div class="menu-item" data-category="specials">
+							<div class="menu-header">
+								<h4>Catpuccino Golden Hour</h4>
+								<span class="price">R$ 16,00</span>
+							</div>
+							<p>
+								Espresso com leite dourado (turmeric latte) e mel. Edição
+								limitada.
+							</p>
+						</div>
+
+						<div class="menu-item" data-category="specials">
+							<div class="menu-header">
+								<h4>Combo Creator</h4>
+								<span class="price">R$ 24,90</span>
+							</div>
+							<p>
+								Bebida + Petisco + Cookie. Perfeito para longas sessões
+								criativas.
+							</p>
+						</div>
+
+						<div class="menu-item" data-category="specials">
+							<div class="menu-header">
+								<h4>Cold Brew Premium</h4>
+								<span class="price">R$ 13,50</span>
+							</div>
+							<p>Café em imersão por 24h. Suave, encorpado e viciante.</p>
+						</div>
+
+						<div class="menu-item" data-category="specials">
+							<div class="menu-header">
+								<h4>Flat White Perfeito</h4>
+								<span class="price">R$ 13,00</span>
+							</div>
+							<p>
+								Espresso com microespuma de leite. A harmonia do café e leite.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Mascot + Story Section -->
+			<section class="mascot" id="mascot">
+				<div class="container">
+					<h2 class="section-title">Conheça Nossa Mascote</h2>
+					<p class="section-subtitle">
+						O coração fofinho por trás de cada xícara
+					</p>
+
+					<div class="mascot-container">
+						<div class="mascot-visual">
+							<div class="mascot-icon"><i class="ph-fill ph-cat"></i></div>
+						</div>
+
+						<div class="mascot-story">
+							<h3>Miau - Nosso Gatinho</h3>
+							<p>
+								Miau nasceu da ideia de unir duas coisas que amamos: gatos e
+								café. Com seus olhos brilhantes e um sorriso que derrete
+								qualquer coração, Miau representa a alma do Catpuccino.
+							</p>
+
+							<div class="mascot-traits">
+								<div class="trait">
+									<strong>Personalidade:</strong> Carinhoso e curioso como todo
+									bom gato
+								</div>
+								<div class="trait">
+									<strong>Hobby:</strong> Degustar café e conhecer novos amigos
+								</div>
+								<div class="trait">
+									<strong>Sonho:</strong> Que todos encontrem aconchego no
+									Catpuccino
+								</div>
+							</div>
+
+							<p class="mascot-quote">
+								"Meow! Um café bom é como um gato: confortável, reconfortante e
+								sempre te surpreende." - Miau
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Gallery / Space Section -->
+			<section class="gallery" id="gallery">
+				<div class="container">
+					<h2 class="section-title">Galeria & Espaço</h2>
+					<p class="section-subtitle">Veja o aconchego do Catpuccino</p>
+
+					<div class="gallery-grid">
+						<div
+							class="gallery-item"
+							style="
+								background: linear-gradient(135deg, #d4a574 0%, #c4956a 100%);
+								animation: fadeIn 0.8s ease;
+							"
+						>
+							<div class="gallery-overlay">Espaço Acolhedor</div>
+						</div>
+						<div
+							class="gallery-item"
+							style="
+								background: linear-gradient(135deg, #b8956a 0%, #a0826d 100%);
+								animation: fadeIn 0.8s ease 0.1s both;
+							"
+						>
+							<div class="gallery-overlay">Detalhes Retrô</div>
+						</div>
+						<div
+							class="gallery-item"
+							style="
+								background: linear-gradient(135deg, #d4a574 0%, #a0826d 100%);
+								animation: fadeIn 0.8s ease 0.2s both;
+							"
+						>
+							<div class="gallery-overlay">Atmosfera Perfeita</div>
+						</div>
+						<div
+							class="gallery-item"
+							style="
+								background: linear-gradient(135deg, #a0826d 0%, #8b7355 100%);
+								animation: fadeIn 0.8s ease 0.3s both;
+							"
+						>
+							<div class="gallery-overlay">Café & Criatividade</div>
+						</div>
+						<div
+							class="gallery-item"
+							style="
+								background: linear-gradient(135deg, #c4956a 0%, #9d7e6f 100%);
+								animation: fadeIn 0.8s ease 0.4s both;
+							"
+						>
+							<div class="gallery-overlay">Encontre Seu Canto</div>
+						</div>
+						<div
+							class="gallery-item"
+							style="
+								background: linear-gradient(135deg, #8b7355 0%, #6b5847 100%);
+								animation: fadeIn 0.8s ease 0.5s both;
+							"
+						>
+							<div class="gallery-overlay">Miau Espera Por Você</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Special Products / Highlights Section -->
+			<section class="highlights" id="highlights">
+				<div class="container">
+					<h2 class="section-title">Destaques Especiais</h2>
+					<p class="section-subtitle">
+						Coisas únicas que só encontra no Catpuccino
+					</p>
+
+					<div class="highlights-grid">
+						<article class="highlight-card">
+							<div class="highlight-icon">
+								<i class="ph-fill ph-camera"></i>
+							</div>
+							<h3>Insta-worthy Drinks</h3>
+							<p>
+								Nossas bebidas são feitas para serem fotografadas. Cada detalhe
+								é pensado para criar aquele conteúdo perfeito para suas redes.
+							</p>
+						</article>
+
+						<article class="highlight-card">
+							<div class="highlight-icon"><i class="ph-fill ph-gift"></i></div>
+							<h3>Kit Catpuccino</h3>
+							<p>
+								Leve para casa nossos produtos especiais: grãos de café, xícaras
+								temáticas e muito mais.
+							</p>
+						</article>
+
+						<article class="highlight-card">
+							<div class="highlight-icon"><i class="ph-fill ph-users"></i></div>
+							<h3>Comunidade Creators</h3>
+							<p>
+								Junte-se a outros creators no Catpuccino. Networking, parcerias
+								e colaborações acontecem aqui.
+							</p>
+						</article>
+
+						<article class="highlight-card">
+							<div class="highlight-icon"><i class="ph-fill ph-cake"></i></div>
+							<h3>Eventos & Celebrações</h3>
+							<p>
+								Organize seu evento no Catpuccino. Aniversários, lançamentos e
+								reuniões com carinho de gato.
+							</p>
+						</article>
+					</div>
+				</div>
+			</section>
+
+			<!-- Testimonials Section -->
+			<section class="testimonials" id="testimonials">
+				<div class="container">
+					<h2 class="section-title">O Que Dizem Sobre Nós</h2>
+					<p class="section-subtitle">
+						Depoimentos fofinhos de clientes felizes
+					</p>
+
+					<div class="testimonials-slider-container">
+						<div class="testimonials-slider">
+							<div class="testimonial-card">
+								<div class="stars">⭐⭐⭐⭐⭐</div>
+								<p>
+									"O Catpuccino é meu lugar favorito para trabalhar! O café é
+									sensacional e a Miau é tão fofa. Já virou meu segundo
+									escritório 😻"
+								</p>
+								<div class="testimonial-author">
+									<strong>Ana Silva</strong>
+									<span>Content Creator</span>
+								</div>
+							</div>
+
+							<div class="testimonial-card">
+								<div class="stars">⭐⭐⭐⭐⭐</div>
+								<p>
+									"Que lugar aconchego! Perfeito para longas conversas com
+									amigos. O Catpuccino Clássico é viciante! ☕❤️"
+								</p>
+								<div class="testimonial-author">
+									<strong>João Santos</strong>
+									<span>Estudante</span>
+								</div>
+							</div>
+
+							<div class="testimonial-card">
+								<div class="stars">⭐⭐⭐⭐⭐</div>
+								<p>
+									"Ambiente retro-moderno impecável. Café de qualidade e
+									atendimento de primeira. Miau roubou meu coração! 🐱"
+								</p>
+								<div class="testimonial-author">
+									<strong>Marina Costa</strong>
+									<span>Designer Gráfico</span>
+								</div>
+							</div>
+
+							<div class="testimonial-card">
+								<div class="stars">⭐⭐⭐⭐⭐</div>
+								<p>
+									"Descobri o Catpuccino recentemente e virou meu lugar de
+									refúgio. Muito mais que café, é uma experiência! 🌟"
+								</p>
+								<div class="testimonial-author">
+									<strong>Lucas Oliveira</strong>
+									<span>Desenvolvedor</span>
+								</div>
+							</div>
+						</div>
+
+						<button
+							class="slider-btn slider-prev"
+							aria-label="Depoimento anterior"
+						>
+							<i class="ph ph-caret-left"></i>
+						</button>
+						<button
+							class="slider-btn slider-next"
+							aria-label="Próximo depoimento"
+						>
+							<i class="ph ph-caret-right"></i>
+						</button>
+					</div>
+
+					<div class="slider-dots">
+						<button
+							class="dot active"
+							data-index="0"
+							aria-label="Depoimento 1"
+						></button>
+						<button
+							class="dot"
+							data-index="1"
+							aria-label="Depoimento 2"
+						></button>
+						<button
+							class="dot"
+							data-index="2"
+							aria-label="Depoimento 3"
+						></button>
+						<button
+							class="dot"
+							data-index="3"
+							aria-label="Depoimento 4"
+						></button>
+					</div>
+				</div>
+			</section>
+
+			<!-- Footer / Contact Section -->
+			<footer class="footer" id="contact">
+				<!-- Decorative Footer Shapes -->
+				<div class="footer-shape footer-shape-1"></div>
+				<div class="footer-shape footer-shape-2"></div>
+				<div class="footer-shape footer-shape-3"></div>
+
+				<!-- Floating Coffee Cup Icons -->
+				<svg
+					class="floating-icon footer-icon-1"
+					xmlns="http://www.w3.org/2000/svg"
+					width="70"
+					height="70"
+					fill="#D4A574"
+					viewBox="0 0 256 256"
+				>
+					<path
+						d="M211.75,44.25C195,27.47,170.37,20.79,142.46,25.44c-26.91,4.49-53.87,19.09-75.9,41.12s-36.63,49-41.12,75.9c-4.65,27.91,2,52.51,18.81,69.29C57.54,225.05,75.75,232,96.62,232a103.66,103.66,0,0,0,16.92-1.44c26.91-4.49,53.87-19.09,75.9-41.12s36.63-49,41.12-75.9C235.21,85.63,228.53,61,211.75,44.25ZM77.87,77.87C102.56,53.19,133,39.93,159.15,39.93a62.26,62.26,0,0,1,29,6.67A108.48,108.48,0,0,0,157.1,63.54c-19.2,15.16-31.63,36.32-36.94,62.89-9.72,48.58-44.7,65.18-67.48,70.84C28.71,168.76,39.4,116.35,77.87,77.87ZM178.13,178.13c-34.69,34.68-80.71,46.78-110.32,31.27A108.72,108.72,0,0,0,98.9,192.46c19.2-15.16,31.63-36.32,36.94-62.89,9.72-48.58,44.7-65.18,67.48-70.84C227.29,87.24,216.6,139.65,178.13,178.13Z"
+					></path>
+				</svg>
+
+				<svg
+					class="floating-icon footer-icon-2"
+					xmlns="http://www.w3.org/2000/svg"
+					width="50"
+					height="50"
+					fill="#E8C9A0"
+					viewBox="0 0 256 256"
+				>
+					<path
+						d="M211.75,44.25C195,27.47,170.37,20.79,142.46,25.44c-26.91,4.49-53.87,19.09-75.9,41.12s-36.63,49-41.12,75.9c-4.65,27.91,2,52.51,18.81,69.29C57.54,225.05,75.75,232,96.62,232a103.66,103.66,0,0,0,16.92-1.44c26.91-4.49,53.87-19.09,75.9-41.12s36.63-49,41.12-75.9C235.21,85.63,228.53,61,211.75,44.25ZM77.87,77.87C102.56,53.19,133,39.93,159.15,39.93a62.26,62.26,0,0,1,29,6.67A108.48,108.48,0,0,0,157.1,63.54c-19.2,15.16-31.63,36.32-36.94,62.89-9.72,48.58-44.7,65.18-67.48,70.84C28.71,168.76,39.4,116.35,77.87,77.87ZM178.13,178.13c-34.69,34.68-80.71,46.78-110.32,31.27A108.72,108.72,0,0,0,98.9,192.46c19.2-15.16,31.63-36.32,36.94-62.89,9.72-48.58,44.7-65.18,67.48-70.84C227.29,87.24,216.6,139.65,178.13,178.13Z"
+					></path>
+				</svg>
+
+				<div class="container">
+					<div class="footer-content">
+						<div class="footer-section">
+							<h4>Catpuccino</h4>
+							<p>
+								Onde o café encontra o aconchego. Uma experiência única em
+								Birigui.
+							</p>
+						</div>
+
+						<div class="footer-section">
+							<h4>Endereço</h4>
+							<p>Birigui, São Paulo<br />Brasil</p>
+						</div>
+
+						<div class="footer-section">
+							<h4>Contato</h4>
+							<p>
+								Email:
+								<a href="mailto:cat.capuccino@gmail.com"
+									>cat.capuccino@gmail.com</a
+								>
+							</p>
+						</div>
+
+						<div class="footer-section">
+							<h4>Redes Sociais</h4>
+							<div class="social-links">
+								<a href="#" aria-label="Instagram"
+									><i class="ph-fill ph-instagram-logo"></i
+								></a>
+								<a href="#" aria-label="TikTok"
+									><i class="ph-fill ph-tiktok-logo"></i
+								></a>
+								<a href="#" aria-label="Twitter"
+									><i class="ph-fill ph-twitter-logo"></i
+								></a>
+								<a href="#" aria-label="Pinterest"
+									><i class="ph-fill ph-pinterest-logo"></i
+								></a>
+							</div>
+						</div>
+					</div>
+
+					<div class="footer-divider"></div>
+
+					<div class="footer-bottom">
+						<p>
+							&copy; 2024 Catpuccino. Todos os direitos reservados. Feito com
+							dedicação.
+						</p>
+						<p>
+							<a href="#" class="link-secondary">Política de Privacidade</a> |
+							<a href="#" class="link-secondary">Termos de Serviço</a>
+						</p>
+					</div>
+				</div>
+			</footer>
+		</main>
+
+		<script src="./js/script.js" defer></script>
+		<script>
+			/* ============================================
+   CATPUCCINO - JAVASCRIPT
+   Sticky Header, Menu Filter, Theme Toggle
+   Performance Optimized Edition
+   ============================================ */
+
+			// Debounce utility for scroll events
+			function debounce(func, wait) {
+				let timeout;
+				return function executedFunction(...args) {
+					const later = () => {
+						clearTimeout(timeout);
+						func(...args);
+					};
+					clearTimeout(timeout);
+					timeout = setTimeout(later, wait);
+				};
+			}
+
+			// Throttle utility for frequent events
+			function throttle(func, limit) {
+				let inThrottle;
+				return function (...args) {
+					if (!inThrottle) {
+						func.apply(this, args);
+						inThrottle = true;
+						setTimeout(() => (inThrottle = false), limit);
+					}
+				};
+			}
+
+			document.addEventListener('DOMContentLoaded', () => {
+				initThemeToggle();
+				initMenuFilter();
+				initMobileMenu();
+				initScrollAnimations();
+				initSmoothScroll();
+				initTestimonialsSlider();
+				initLazyLoading();
+				initPerformanceOptimizations();
+			});
+
+			/* ============================================
+   THEME TOGGLE - Light/Dark Mode
+   ============================================ */
+
+			function initThemeToggle() {
+				const themeToggle = document.querySelector('.theme-toggle');
+				const htmlElement = document.documentElement;
+
+				// Detecta preferência salva ou usa preferência do sistema
+				const prefersDark = window.matchMedia(
+					'(prefers-color-scheme: dark)'
+				).matches;
+				const savedTheme = localStorage.getItem('catpuccino-theme');
+				const currentTheme = savedTheme || (prefersDark ? 'dark' : 'light');
+
+				// Define tema inicial
+				setTheme(currentTheme);
+				updateThemeIcon(currentTheme);
+
+				// Event listener para toggle
+				themeToggle.addEventListener('click', () => {
+					const newTheme =
+						htmlElement.getAttribute('data-theme') === 'dark'
+							? 'light'
+							: 'dark';
+					setTheme(newTheme);
+				});
+
+				// Escuta mudanças de preferência do sistema
+				window
+					.matchMedia('(prefers-color-scheme: dark)')
+					.addEventListener('change', (e) => {
+						if (!localStorage.getItem('catpuccino-theme')) {
+							setTheme(e.matches ? 'dark' : 'light');
+						}
+					});
+			}
+
+			function setTheme(theme) {
+				const htmlElement = document.documentElement;
+
+				// Define o atributo data-theme para mudar variáveis CSS
+				htmlElement.setAttribute('data-theme', theme);
+				localStorage.setItem('catpuccino-theme', theme);
+				updateThemeIcon(theme);
+			}
+
+			function updateThemeIcon(theme) {
+				const icon = document.querySelector('.theme-toggle i');
+				if (icon) {
+					if (theme === 'dark') {
+						icon.classList.remove('ph-moon');
+						icon.classList.add('ph-sun');
+					} else {
+						icon.classList.remove('ph-sun');
+						icon.classList.add('ph-moon');
+					}
+				}
+			}
+
+			/* ============================================
+   MENU FILTER - Tab System
+   ============================================ */
+
+			function initMenuFilter() {
+				const tabButtons = document.querySelectorAll('.tab-btn');
+				const menuItems = document.querySelectorAll('.menu-item');
+
+				tabButtons.forEach((button) => {
+					button.addEventListener('click', () => {
+						const category = button.getAttribute('data-category');
+
+						// Remove classe active de todos os buttons
+						tabButtons.forEach((btn) => btn.classList.remove('active'));
+						// Adiciona classe active ao button clicado
+						button.classList.add('active');
+
+						// Filtra menu items
+						menuItems.forEach((item) => {
+							if (item.getAttribute('data-category') === category) {
+								item.classList.remove('hidden');
+								item.style.animation = 'fadeIn 0.4s ease';
+							} else {
+								item.classList.add('hidden');
+							}
+						});
+					});
+				});
+
+				// Define primeira tab como ativa
+				if (tabButtons.length > 0) {
+					tabButtons[0].classList.add('active');
+				}
+			}
+
+			/* ============================================
+   MOBILE MENU TOGGLE
+   ============================================ */
+
+			function initMobileMenu() {
+				const menuToggle = document.querySelector('.menu-toggle');
+				const navMenu = document.querySelector('.nav-menu');
+
+				if (!menuToggle) return;
+
+				menuToggle.addEventListener('click', () => {
+					navMenu.classList.toggle('active');
+				});
+
+				// Fecha menu ao clicar em um link
+				const navLinks = document.querySelectorAll('.nav-menu a');
+				navLinks.forEach((link) => {
+					link.addEventListener('click', () => {
+						navMenu.classList.remove('active');
+					});
+				});
+			}
+
+			/* ============================================
+   SCROLL ANIMATIONS - Fade In on Scroll
+   ============================================ */
+
+			function initScrollAnimations() {
+				const observerOptions = {
+					threshold: 0.1,
+					rootMargin: '0px 0px -50px 0px',
+				};
+
+				const observer = new IntersectionObserver((entries) => {
+					entries.forEach((entry) => {
+						if (entry.isIntersecting) {
+							entry.target.style.opacity = '1';
+							entry.target.style.transform = 'translateY(0)';
+						}
+					});
+				}, observerOptions);
+
+				// Observa cards e seções para animação
+				const elements = document.querySelectorAll(
+					'.experience-card, .menu-item, .highlight-card, .testimonial-card, .gallery-item'
+				);
+
+				elements.forEach((el) => {
+					el.style.opacity = '0';
+					el.style.transform = 'translateY(20px)';
+					el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+					observer.observe(el);
+				});
+			}
+
+			/* ============================================
+   SMOOTH SCROLL - Navigation Links
+   ============================================ */
+
+			function initSmoothScroll() {
+				document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+					anchor.addEventListener('click', function (e) {
+						const href = this.getAttribute('href');
+
+						if (href === '#' || !href) return;
+
+						e.preventDefault();
+
+						const target = document.querySelector(href);
+						if (target) {
+							const headerHeight =
+								document.querySelector('.header').offsetHeight;
+							const targetPosition = target.offsetTop - headerHeight;
+
+							window.scrollTo({
+								top: targetPosition,
+								behavior: 'smooth',
+							});
+						}
+					});
+				});
+			}
+
+			/* ============================================
+   PARALLAX EFFECT - Hero Section
+   ============================================ */
+
+			window.addEventListener(
+				'scroll',
+				throttle(() => {
+					const parallaxBg = document.querySelector('.parallax-bg');
+
+					if (parallaxBg) {
+						const scrollPosition = window.pageYOffset;
+						parallaxBg.style.transform = `translateY(${
+							scrollPosition * 0.5
+						}px)`;
+					}
+				}, 16)
+			);
+
+			/* ============================================
+   NAVBAR SCROLL EFFECT - Shadow on Scroll
+   ============================================ */
+
+			window.addEventListener(
+				'scroll',
+				throttle(() => {
+					const header = document.querySelector('.header');
+
+					if (window.scrollY > 10) {
+						header.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.1)';
+					} else {
+						header.style.boxShadow = 'none';
+					}
+				}, 16)
+			);
+
+			/* ============================================
+   SCROLL INDICATOR - Active Nav Link
+   ============================================ */
+
+			window.addEventListener(
+				'scroll',
+				throttle(() => {
+					let current = '';
+					const sections = document.querySelectorAll('section');
+					const navLinks = document.querySelectorAll('.nav-menu a');
+
+					sections.forEach((section) => {
+						const sectionTop = section.offsetTop - 200;
+						if (window.pageYOffset >= sectionTop) {
+							current = section.getAttribute('id');
+						}
+					});
+
+					navLinks.forEach((link) => {
+						link.classList.remove('active');
+						if (link.getAttribute('href').slice(1) === current) {
+							link.classList.add('active');
+						}
+					});
+				}, 100)
+			);
+
+			/* ============================================
+   FORM VALIDATION - Future Contact Form
+   ============================================ */
+
+			function validateEmail(email) {
+				const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+				return re.test(email);
+			}
+
+			/* ============================================
+   TESTIMONIALS SLIDER
+   ============================================ */
+
+			function initTestimonialsSlider() {
+				const slider = document.querySelector('.testimonials-slider');
+				const cards = document.querySelectorAll('.testimonial-card');
+				const dots = document.querySelectorAll('.slider-dots .dot');
+				const prevBtn = document.querySelector('.slider-prev');
+				const nextBtn = document.querySelector('.slider-next');
+
+				let currentIndex = 0;
+				const cardWidth = 100; // Each card is 100% of container width
+
+				function updateSlider() {
+					const offset = -currentIndex * cardWidth;
+					slider.style.transform = `translateX(${offset}%)`;
+
+					// Update active dot
+					dots.forEach((dot, idx) => {
+						dot.classList.toggle('active', idx === currentIndex);
+					});
+				}
+
+				function nextSlide() {
+					currentIndex = (currentIndex + 1) % cards.length;
+					updateSlider();
+				}
+
+				function prevSlide() {
+					currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+					updateSlider();
+				}
+
+				// Event listeners for buttons
+				nextBtn.addEventListener('click', nextSlide);
+				prevBtn.addEventListener('click', prevSlide);
+
+				// Event listeners for dots
+				dots.forEach((dot, idx) => {
+					dot.addEventListener('click', () => {
+						currentIndex = idx;
+						updateSlider();
+					});
+				});
+
+				// Optional: Auto-advance every 8 seconds
+				setInterval(nextSlide, 8000);
+			}
+
+			/* ============================================
+   UTILITY - Log Initialization
+   ============================================ */
+
+			console.log('🐱 Catpuccino - Website carregado com sucesso!');
+			console.log('☕ Bem-vindo à nossa experiência de aconchego.');
+
+			/* ============================================
+   LAZY LOADING - Native Image Lazy Load
+   ============================================ */
+
+			function initLazyLoading() {
+				// Check if browser supports Intersection Observer
+				if ('IntersectionObserver' in window) {
+					// Lazy load images with native loading="lazy"
+					const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+					lazyImages.forEach((img) => {
+						img.addEventListener('load', () => {
+							img.classList.add('loaded');
+						});
+					});
+
+					// Observe background images in gallery
+					const galleryItems = document.querySelectorAll('.gallery-item');
+					const imageObserver = new IntersectionObserver(
+						(entries, observer) => {
+							entries.forEach((entry) => {
+								if (entry.isIntersecting) {
+									// Trigger background image load for gradients
+									entry.target.style.willChange = 'transform';
+									observer.unobserve(entry.target);
+								}
+							});
+						},
+						{ threshold: 0.1 }
+					);
+
+					galleryItems.forEach((item) => {
+						imageObserver.observe(item);
+					});
+				}
+			}
+
+			/* ============================================
+   PERFORMANCE OPTIMIZATIONS
+   ============================================ */
+
+			function initPerformanceOptimizations() {
+				// Use requestAnimationFrame for smooth animations
+				const reduceMotion = window.matchMedia(
+					'(prefers-reduced-motion: reduce)'
+				).matches;
+
+				if (reduceMotion) {
+					document.documentElement.style.scrollBehavior = 'auto';
+					// Disable animations if user prefers reduced motion
+					document.querySelectorAll('[style*="animation"]').forEach((el) => {
+						el.style.animation = 'none';
+					});
+				}
+
+				// Defer non-critical CSS loading
+				const stylesheets = document.querySelectorAll('link[rel="stylesheet"]');
+				stylesheets.forEach((link) => {
+					if (!link.hasAttribute('media') || link.media !== 'print') {
+						// CSS já carregado, apenas otimizar
+						link.removeAttribute('media');
+					}
+				});
+
+				// Preload critical fonts if available
+				const fontLink = document.querySelector(
+					'link[rel="preload"][as="font"]'
+				);
+				if (fontLink) {
+					fontLink.crossOrigin = 'anonymous';
+				}
+
+				// Monitor Web Vitals (optional - requires reporting endpoint)
+				if ('PerformanceObserver' in window) {
+					try {
+						// Cumulative Layout Shift
+						const clsObserver = new PerformanceObserver((list) => {
+							for (const entry of list.getEntries()) {
+								if (!entry.hadRecentInput) {
+									console.log('CLS:', entry.value);
+								}
+							}
+						});
+						clsObserver.observe({ type: 'layout-shift', buffered: true });
+					} catch (e) {
+						// PerformanceObserver not supported for layout-shift
+					}
+				}
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+h1,
+h2,
+h3 {
+	font-family: 'Karla', sans-serif;
+	font-weight: 900;
+}
+.bg-cream {
+	background-color: #fff7e3;
+}
+.bg-yellow {
+	background-color: #fdeb9e;
+}
+.bg-magenta {
+	background-color: #850e35;
+}
+.bg-navy {
+	background-color: #0c2b4e;
+}
+
+.text-cream {
+	color: #fff7e3;
+}
+.text-yellow {
+	color: #fdeb9e;
+}
+.text-magenta {
+	color: #850e35;
+}
+.text-navy {
+	color: #0c2b4e;
+}
+
+.border-cream {
+	border-color: #fff7e3;
+}
+.border-yellow {
+	border-color: #fdeb9e;
+}
+.border-magenta {
+	border-color: #850e35;
+}
+.border-navy {
+	border-color: #0c2b4e;
+}
+.card {
+	box-shadow: 0 10px 40px #00000010;
+}
+.history-wrapper {
+	background-color: #fff7e3;
+	border-radius: 18px;
+	padding: 2rem;
+	box-shadow: 0 10px 40px #00000010;
+}
+
+.history-image {
+	max-width: 520px;
+	width: 100%;
+	border-radius: 12px;
+	box-shadow: 0 20px 50px #00000020;
+	transform: rotate(-3deg);
+}
+
+@media (max-width: 768px) {
+	.history-image {
+		transform: none;
+	}
+}
