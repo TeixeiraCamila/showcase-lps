@@ -40,9 +40,12 @@
 							<label class="form__label" for="year">Ano</label>
 							<input
 								class="form__input"
-								type="text"
+								type="number"
 								id="year"
 								placeholder="2022"
+								min="1000"
+								max="9999"
+								maxlength="4"
 							/>
 						</div>
 						<div class="form__group">
@@ -89,7 +92,7 @@
 					</div>
 
 					<div class="form__group">
-						<label class="form__label">Elenco (use até 3 campos)</label>
+						<label class="form__label">Elenco (até 2 atores)</label>
 						<input
 							class="form__input"
 							type="text"
@@ -102,13 +105,6 @@
 							type="text"
 							id="starring2"
 							placeholder="PARK JAE CHAN"
-							style="margin-bottom: 10px"
-						/>
-						<input
-							class="form__input"
-							type="text"
-							id="starring3"
-							placeholder="Ator/Atriz 3"
 						/>
 					</div>
 

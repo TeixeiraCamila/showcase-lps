@@ -1,14 +1,11 @@
 /* Variáveis CSS para cores */
 :root {
-	--frozen-water: #b9e1d9ff;
-	--shadow-grey: #292421ff;
-	--cinnamon-wood: #a75f37ff;
-	--rosy-taupe: #ca8e83ff;
-	--desert-sand: #d9b9a0ff;
-	--almond-silk: #f2d5cdff;
-	--linen: #f1e7ddff;
+	--neutral-gray: #a9abaa;
+	--dark-gray: #292b2a;
+	--blue-gray: #6c929f;
+	--reddish-brown: #c17c75;
+	--light-gray: #d4d4d4;
 	--preview-bg: #e8e4df; /* Cor de fundo da polaroid, usada no JS */
-	--muted-teal: #7a9590ff;
 }
 
 /* Reset básico */
@@ -21,10 +18,14 @@
 /* Estilos base do body */
 body {
 	font-family: 'Arial', sans-serif;
-	background: linear-gradient(135deg, #c9c5c0 0%, #a39e96 100%);
+	background: linear-gradient(
+		135deg,
+		var(--neutral-gray) 0%,
+		var(--dark-gray) 100%
+	);
 	min-height: 100vh;
 	padding: 20px;
-	color: var(--shadow-grey);
+	color: var(--dark-gray);
 }
 
 /* Bloco principal da aplicação */
@@ -41,13 +42,13 @@ body {
 
 .poster-generator__title {
 	font-size: 3rem;
-	color: var(--shadow-grey);
+	color: var(--dark-gray);
 	margin-bottom: 10px;
 	text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
 }
 
 .poster-generator__subtitle {
-	color: var(--muted-teal);
+	color: var(--dark-gray);
 	font-size: 1.2rem;
 }
 
@@ -55,22 +56,22 @@ body {
 .poster-generator__main {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	gap: 30px;
+	gap: 15px;
 }
 
 /* Cards genéricos */
 .card {
-	background: var(--linen);
+	background: var(--light-gray);
 	border-radius: 20px;
-	padding: 30px;
-	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+	padding: 15px;
+	box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
 }
 
 .card__title {
-	color: var(--cinnamon-wood);
+	color: var(--reddish-brown);
 	font-size: 1.8rem;
 	margin-bottom: 25px;
-	border-bottom: 3px solid var(--rosy-taupe);
+	border-bottom: 3px solid var(--reddish-brown);
 	padding-bottom: 10px;
 }
 
@@ -83,13 +84,13 @@ body {
 	display: block;
 	font-weight: 600;
 	margin-bottom: 8px;
-	color: var(--shadow-grey);
+	color: var(--dark-gray);
 }
 
 .form__input {
 	width: 100%;
 	padding: 12px 15px;
-	border: 2px solid var(--desert-sand);
+	border: 2px solid var(--neutral-gray);
 	border-radius: 8px;
 	font-size: 1rem;
 	background: white;
@@ -98,8 +99,8 @@ body {
 
 .form__input:focus {
 	outline: none;
-	border-color: var(--cinnamon-wood);
-	box-shadow: 0 0 0 3px rgba(167, 95, 55, 0.1);
+	border-color: var(--reddish-brown);
+	box-shadow: 0 0 0 3px rgba(193, 124, 117, 0.1);
 }
 
 .form__grid-2 {
@@ -122,36 +123,36 @@ body {
 }
 
 .btn--primary {
-	background: var(--cinnamon-wood);
+	background: var(--reddish-brown);
 	color: white;
 }
 
 .btn--primary:hover {
-	background: var(--rosy-taupe);
+	background: #a05045;
 	transform: translateY(-2px);
-	box-shadow: 0 5px 15px rgba(167, 95, 55, 0.4);
+	box-shadow: 0 5px 15px rgba(193, 124, 117, 0.4);
 }
 
 .btn--secondary {
-	background: var(--frozen-water);
-	color: var(--shadow-grey);
+	background: var(--blue-gray);
+	color: var(--dark-gray);
 }
 
 .btn--secondary:hover {
-	background: var(--muted-teal);
+	background: #5a7f8a;
 	transform: translateY(-2px);
-	box-shadow: 0 5px 15px rgba(122, 149, 144, 0.4);
+	box-shadow: 0 5px 15px rgba(108, 146, 159, 0.4);
 }
 
 .btn--download {
-	background: var(--rosy-taupe);
+	background: var(--reddish-brown);
 	color: white;
 }
 
 .btn--download:hover {
-	background: var(--cinnamon-wood);
+	background: #a05045;
 	transform: translateY(-2px);
-	box-shadow: 0 5px 15px rgba(202, 142, 131, 0.4);
+	box-shadow: 0 5px 15px rgba(193, 124, 117, 0.4);
 }
 
 /* Preview */
@@ -183,7 +184,7 @@ body {
 	justify-content: center;
 	aspect-ratio: 1/1.2;
 	background: #d4cfc9;
-	color: var(--muted-teal);
+	color: var(--blue-gray);
 	font-size: 1.2rem;
 	text-align: center;
 }
@@ -193,11 +194,13 @@ body {
 }
 
 .preview__image {
-	width: 100%;
-	aspect-ratio: 1/1.2;
+	width: 300px; /* Largura exata igual ao canvas */
+	height: 420px; /* Altura exata igual ao canvas (60% de 700px) */
 	object-fit: cover;
 	display: block;
 	margin-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .preview__info {
@@ -214,9 +217,9 @@ body {
 }
 
 .info__title {
-	font-size: 2.2rem;
+	font-size: 2rem;
 	font-weight: 900;
-	color: var(--shadow-grey);
+	color: var(--dark-gray);
 	text-transform: uppercase;
 	letter-spacing: -1px;
 	line-height: 1.1;
@@ -224,11 +227,12 @@ body {
 	word-wrap: break-word;
 	flex: 1;
 	margin-right: 15px;
+	max-width: 80%;
 }
 
 .info__year {
 	font-size: 1.6rem;
-	color: var(--shadow-grey);
+	color: var(--dark-gray);
 	font-weight: 300;
 	font-family: 'Arial', sans-serif;
 	flex-shrink: 0;
@@ -240,7 +244,7 @@ body {
 
 .info__label {
 	font-size: 0.7rem;
-	color: var(--shadow-grey);
+	color: var(--dark-gray);
 	font-weight: 400;
 	margin-bottom: 4px;
 	font-style: italic;
@@ -248,7 +252,7 @@ body {
 
 .info__value {
 	font-size: 0.85rem;
-	color: var(--shadow-grey);
+	color: var(--dark-gray);
 	font-weight: 400;
 	line-height: 1.4;
 	text-transform: uppercase;
@@ -311,10 +315,10 @@ body {
 	width: 100%;
 	text-align: center;
 	font-weight: 800;
-	color: var(--linen);
+	color: var(--light-gray);
 	transition: all 300ms ease-in-out;
 }
 
 .footer__link:hover {
-	color: var(--cinnamon-wood);
+	color: var(--reddish-brown);
 }
